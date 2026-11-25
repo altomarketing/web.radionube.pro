@@ -737,6 +737,84 @@
       flex-shrink: 0;
     }
 
+
+    /* SHOWCASE WITH IMAGES */
+    .feature-showcase {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      margin: 60px 0;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+    .feature-showcase.reverse {
+      flex-direction: row-reverse;
+    }
+    .feature-showcase-img {
+      flex: 1;
+      text-align: center;
+    }
+    .feature-showcase-img img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      border: 1px solid #e2e8f0;
+      display: block;
+      margin: 0 auto;
+    }
+    .feature-showcase-text {
+      flex: 1;
+    }
+    .feature-showcase-text h3 {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin: 12px 0 14px;
+      line-height: 1.3;
+    }
+    .feature-showcase-text p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .feature-showcase-list {
+      list-style: none;
+    }
+    .feature-showcase-list li {
+      font-size: 14px;
+      color: var(--text-main);
+      padding: 8px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      border-bottom: 1px dashed #f1f5f9;
+    }
+    .feature-showcase-list li:last-child {
+      border-bottom: none;
+    }
+    .feature-showcase-list svg {
+      width: 18px;
+      height: 18px;
+      fill: #10b981;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .feature-showcase-list strong {
+      color: var(--primary-dark);
+    }
+    @media (max-width: 992px) {
+      .feature-showcase, .feature-showcase.reverse {
+        flex-direction: column;
+        padding: 24px;
+        gap: 30px;
+      }
+    }
+
 /* VALUE PROPOSITION / FEATURES GRID */
     .features-section {
       padding: 80px 0;
@@ -1397,7 +1475,7 @@
     </div>
   </section>
 
-    <!-- FEATURES / SONICPANEL CARACTERÍSTICAS -->
+      <!-- FEATURES / SONICPANEL CARACTERÍSTICAS -->
   <section class="features-section" id="caracteristicas">
     <div class="container">
       <div class="section-title">
@@ -1406,134 +1484,104 @@
         <p>Todo lo que necesitas para operar una emisora de radio profesional con automatización en la nube, calidad de estudio y estadísticas en tiempo real.</p>
       </div>
 
-      <!-- CATEGORÍA 1: TRANSMISIÓN EN VIVO Y EN EL AIRE -->
-      <div class="sp-category-header">
-        <span class="sp-badge">En El Aire</span>
-        <h3>Funciones Exclusivas de Emisión en Vivo</h3>
-      </div>
-
-      <div class="grid-3">
-        <div class="feature-box">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg>
-          </div>
-          <h3>Inyección de Jingles al Vuelo</h3>
-          <p>Dispara sellos, separadores y jingles publicitarios directamente en la transmisión mientras estás al aire, sin pisar la música ni interrumpir a tus oyentes.</p>
-          <ul class="feature-highlights">
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Inserción directa en vivo</li>
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Efectos de desvanecimiento automáticos</li>
-          </ul>
+      <!-- SHOWCASE 1: INTERVALOS Y PROGRAMACIÓN -->
+      <div class="feature-showcase">
+        <div class="feature-showcase-img">
+          <img src="assets/img/sonicpanel/playlists.png" alt="SonicPanel Programación de Listas e Intervalos" loading="lazy">
         </div>
-
-        <div class="feature-box">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 11H7V9h2v2zm4 0h-2V9h2v2zm4 0h-2V9h2v2z"/></svg>
-          </div>
-          <h3>Locutor Virtual Text-to-Voice</h3>
-          <p>Convierte texto escrito en voz profesional humana para decir la hora, títulos de canciones, clima o promociones institucionales programadas.</p>
-          <ul class="feature-highlights">
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Voces realistas de alta calidad</li>
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Locución automática entre canciones</li>
-          </ul>
-        </div>
-
-        <div class="feature-box">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/></svg>
-          </div>
-          <h3>Cambio de Playlist sin Cortes</h3>
-          <p>Pasa de una lista de reproducción a otra en caliente mientras el servidor continúa sonando, logrando una transición suave con crossfade profesional.</p>
-          <ul class="feature-highlights">
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Cero segundos de silencio</li>
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Transición con fundido perfecto</li>
+        <div class="feature-showcase-text">
+          <span class="sp-badge">Automatización Inteligente</span>
+          <h3>Intervalos de Playlists y Programación Horaria</h3>
+          <p>Un sistema de programación revolucionario con posibilidades ilimitadas. Crea listas que se reproduzcan <strong>cada X minutos</strong>, en <strong>horas específicas</strong> (ej. exactamente al minuto :00 de cada hora) o en <strong>días determinados</strong> de la semana. Ideal para boletines de noticias, tandas publicitarias y jingles.</p>
+          <ul class="feature-showcase-list">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>Detección de Zona Horaria por IA:</strong> Programa según tu hora local, no la del servidor.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>Puntualidad Absoluta:</strong> Jingles, tandas y noticias se disparan en el minuto exacto.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>Mezcla en el Aire (On Air):</strong> Fundidos suaves (crossfade) entre temas y programas.</span></li>
           </ul>
         </div>
       </div>
 
-      <!-- CATEGORÍA 2: AUTODJ Y GESTIÓN MUSICAL -->
-      <div class="sp-category-header">
-        <span class="sp-badge">Automatización</span>
-        <h3>Programación Avanzada y AutoDJ 24/7</h3>
-      </div>
-
-      <div class="grid-3">
-        <div class="feature-box">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-          </div>
-          <h3>Programación por Intervalos y Horarios</h3>
-          <p>Configura listas que se activen cada X minutos, en horarios exactos (al inicio de cada hora :00) o en días específicos de la semana con precisión absoluta.</p>
-          <ul class="feature-highlights">
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Boletines de noticias y publicidad</li>
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Detección de Zona Horaria por IA</li>
-          </ul>
+      <!-- SHOWCASE 2: SUBIDAS FTP DIRECTAS -->
+      <div class="feature-showcase reverse">
+        <div class="feature-showcase-img">
+          <img src="assets/img/sonicpanel/ftp.png" alt="SonicPanel Cargas Directas por FTP" loading="lazy">
         </div>
-
-        <div class="feature-box">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
-          </div>
-          <h3>Carga Rápida Web y Acceso FTP</h3>
-          <p>Sube gigabytes de música con tu cliente FTP favorito (FileZilla, WinSCP) en el puerto estándar 21 o mediante arrastrar y soltar desde el navegador.</p>
-          <ul class="feature-highlights">
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Subida por bloques hasta 100x más rápida</li>
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Creación automática de carpetas</li>
-          </ul>
-        </div>
-
-        <div class="feature-box">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 3v9.28c-.47-.17-.97-.28-1.5-.28C8.01 12 6 14.01 6 16.5S8.01 21 10.5 21c2.31 0 4.2-1.75 4.45-4H15V6h4V3h-7z"/></svg>
-          </div>
-          <h3>Biblioteca Musical por Álbumes</h3>
-          <p>Organiza tu discografía con carpetas y álbumes en árbol. Agrega pistas a múltiples playlists sin duplicar archivos ni consumir espacio extra de disco.</p>
-          <ul class="feature-highlights">
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Cero consumo redundante de almacenamiento</li>
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Editor de etiquetas ID3v2 integrado</li>
+        <div class="feature-showcase-text">
+          <span class="sp-badge">Velocidad y Comodidad</span>
+          <h3>Subidas Directas por FTP en Puerto 21</h3>
+          <p>¿Tienes una colección musical de cientos de gigabytes? Conéctate con tu cliente FTP favorito (FileZilla, WinSCP, Cyberduck) a través de <strong>FTP estándar en el Puerto 21</strong> y gestiona tus librerías de audio directamente, sin límites de navegador.</p>
+          <ul class="feature-showcase-list">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>Gestión Masiva:</strong> Sube carpetas completas y SonicPanel creará listas automáticas.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>Sincronización Inmediata:</strong> Los archivos nuevos aparecen al instante en el panel.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>Seguridad Total:</strong> Protección Brute Force integrada para accesos FTP.</span></li>
           </ul>
         </div>
       </div>
 
-      <!-- CATEGORÍA 3: AUDIENCIA, ESTADÍSTICAS Y SEGURIDAD -->
-      <div class="sp-category-header">
-        <span class="sp-badge">Métricas & Control</span>
-        <h3>Estadísticas en Tiempo Real y Protección</h3>
+      <!-- SHOWCASE 3: ESTADÍSTICAS NEXT-GEN -->
+      <div class="feature-showcase">
+        <div class="feature-showcase-img">
+          <img src="assets/img/sonicpanel/stats.png" alt="SonicPanel Estadísticas de Oyentes de Última Generación" loading="lazy">
+        </div>
+        <div class="feature-showcase-text">
+          <span class="sp-badge">Métricas Claras</span>
+          <h3>Estadísticas de Audiencia de Próxima Generación</h3>
+          <p>Toma decisiones basadas en datos reales. Conoce a fondo a tus oyentes, analiza tendencias de sintonía y genera reportes completos para auspiciantes u organismos de derechos de autor.</p>
+          <ul class="feature-showcase-list">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>Visualización por Países y Dispositivos:</strong> Identifica desde dónde te sintonizan.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>Reportes Profesionales:</strong> Exportaciones listas en formato PDF, Excel y TXT.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>Historial Profundo:</strong> Datos comparativos por hora, día, semana, mes y año.</span></li>
+          </ul>
+        </div>
       </div>
 
-      <div class="grid-3">
-        <div class="feature-box">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          </div>
-          <h3>Mapa Mundial Interactivo GeoIP</h3>
-          <p>Observa en tiempo real desde qué ciudades y países se conectan tus oyentes con marcadores en vivo que se actualizan automáticamente cada 5 segundos.</p>
-          <ul class="feature-highlights">
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> IPs reales y dispositivos de tus oyentes</li>
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Historial por horas, días y meses</li>
+      <!-- SHOWCASE 4: AUDIENCIA EN TIEMPO REAL -->
+      <div class="feature-showcase reverse">
+        <div class="feature-showcase-img">
+          <img src="assets/img/sonicpanel/new_live_listeners.png" alt="SonicPanel Monitoreo en Vivo" loading="lazy">
+        </div>
+        <div class="feature-showcase-text">
+          <span class="sp-badge">En Vivo</span>
+          <h3>Monitoreo de Oyentes en Tiempo Real</h3>
+          <p>Monitorea tu emisora <strong>en tiempo real</strong>. Estadísticas que se refrescan automáticamente cada 5 segundos mostrando cómo crece tu audiencia y desde qué ciudad están conectados.</p>
+          <ul class="feature-showcase-list">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>Oyentes Activos y Únicos:</strong> Métricas en vivo sin retrasos ni estimaciones falsas.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>Canción al Aire:</strong> Visualización instantánea de metadatos del tema actual.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>Mapa Interactivo GeoIP:</strong> Marcadores dinámicos por ciudad en el mapa del mundo.</span></li>
           </ul>
         </div>
+      </div>
 
-        <div class="feature-box">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-          </div>
-          <h3>Cuentas de Locutores y DJs</h3>
-          <p>Crea usuarios ilimitados para tus conductores y locutores con permisos personalizados, claves individuales y foto de perfil en el reproductor web al salir en vivo.</p>
-          <ul class="feature-highlights">
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Emisión remota sin compartir clave maestra</li>
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Widget "En Vivo" automático</li>
+      <!-- SHOWCASE 5: GESTOR DE PLAYLISTS ARRASTRAR Y SOLTAR -->
+      <div class="feature-showcase">
+        <div class="feature-showcase-img">
+          <img src="assets/img/sonicpanel/feature-3.png" alt="SonicPanel Gestor de Playlists Arrastrar y Soltar" loading="lazy">
+        </div>
+        <div class="feature-showcase-text">
+          <span class="sp-badge">Fácil e Intuitivo</span>
+          <h3>Gestor de Playlists con Arrastrar y Soltar</h3>
+          <p>El administrador de listas de reproducción más avanzado del mercado, tan sencillo como usar tu teléfono celular. Ordena canciones con <strong>Drag & Drop</strong>, edita metadatos y reproduce temas inmediatamente al aire sin cortar la sintonía.</p>
+          <ul class="feature-showcase-list">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>Reordenamiento Visual:</strong> Arrastra y suelta temas en segundos.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>Subida Chunked:</strong> Carga directa desde el navegador hasta 100 veces más veloz.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>Edición ID3v2:</strong> Modifica artistas, títulos y portadas directamente en la nube.</span></li>
           </ul>
         </div>
+      </div>
 
-        <div class="feature-box">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-          </div>
-          <h3>SSL Nativo y Protección Anti-DDoS</h3>
-          <p>Enlaces de audio 100% seguros con HTTPS permanente para navegadores modernos, firewall SonicPanel activo y mitigación contra ataques de denegación de servicio.</p>
-          <ul class="feature-highlights">
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Soporte Shoutcast v1/v2 e Icecast</li>
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Protección Brute Force en puertos de login</li>
+      <!-- SHOWCASE 6: BIBLIOTECA MUSICAL Y ÁLBUMES -->
+      <div class="feature-showcase reverse">
+        <div class="feature-showcase-img">
+          <img src="assets/img/sonicpanel/feature-4.png" alt="SonicPanel Biblioteca Musical por Álbumes" loading="lazy">
+        </div>
+        <div class="feature-showcase-text">
+          <span class="sp-badge">Ahorro de Espacio</span>
+          <h3>Biblioteca Musical por Álbumes y Carpetas</h3>
+          <p>Crea <strong>tus propias carpetas de álbumes</strong> y sube canciones con multi-carga en la misma pantalla. Luego simplemente arrastra temas desde la biblioteca hacia cualquier playlist. <strong>Importante ahorro de espacio en disco:</strong> las canciones en la librería no ocupan espacio adicional al agregarse a diferentes listas.</p>
+          <ul class="feature-showcase-list">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>Estructura en Árbol:</strong> Todo tu catálogo musical perfectamente clasificado.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>Cero Espacio Redundante:</strong> Un mismo MP3 puede sonar en varias listas sin duplicarse.</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>Respuesta Instantánea:</strong> Desarrollado en AJAX para navegación sin recargas.</span></li>
           </ul>
         </div>
       </div>
