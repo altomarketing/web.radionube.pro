@@ -21,6 +21,11 @@
       "@type": "Brand",
       "name": "RadioNube"
     },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "250"
+    },
     "offers": [
       {
         "@type": "Offer",
@@ -57,6 +62,8 @@
       --primary-light: #eaf5fa;
       --accent: #ff9800;
       --accent-hover: #e68900;
+      --fb-blue: #1877f2;
+      --tp-green: #00b67a;
       --text-main: #1f2937;
       --text-muted: #6b7280;
       --bg-light: #f8fafc;
@@ -478,11 +485,216 @@
       box-shadow: 0 6px 18px rgba(22, 54, 79, 0.4);
     }
 
+    /* REVIEWS SECTION (FACEBOOK & TRUSTPILOT) */
+    .reviews-section {
+      padding: 85px 0;
+      background: #f1f5f9;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .reviews-badge-hub {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 45px;
+    }
+
+    .review-hub-box {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 18px 28px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .hub-icon-fb {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--fb-blue);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .hub-icon-tp {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--tp-green);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    .hub-text strong {
+      display: block;
+      font-size: 17px;
+      color: var(--primary-dark);
+    }
+
+    .hub-text span {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .hub-text a {
+      color: var(--primary);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    .reviews-title-sub {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .reviews-title-sub h3 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 45px;
+    }
+
+    .review-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s;
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .review-card.fb-card {
+      border-top: 4px solid var(--fb-blue);
+    }
+
+    .review-card.tp-card {
+      border-top: 4px solid var(--tp-green);
+    }
+
+    .review-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .review-stars {
+      display: flex;
+      gap: 3px;
+    }
+
+    .star-gold {
+      color: #f59e0b;
+      font-size: 16px;
+    }
+
+    .star-tp {
+      background: var(--tp-green);
+      color: #fff;
+      padding: 1px 4px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+
+    .review-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 12px;
+    }
+
+    .review-tag.fb {
+      background: #e7f3ff;
+      color: var(--fb-blue);
+    }
+
+    .review-tag.tp {
+      background: #e6f8f1;
+      color: var(--tp-green);
+    }
+
+    .review-headline {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    .review-quote {
+      font-size: 13.5px;
+      color: #475569;
+      line-height: 1.5;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 12px;
+    }
+
+    .author-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #e2e8f0;
+      color: var(--primary-dark);
+      font-weight: 800;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .author-info strong {
+      display: block;
+      font-size: 14px;
+      color: var(--primary-dark);
+    }
+
+    .author-info span {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
     /* VALUE PROPOSITION / FEATURES GRID */
     .features-section {
       padding: 80px 0;
       background: #ffffff;
-      border-top: 1px solid var(--border-color);
       border-bottom: 1px solid var(--border-color);
     }
 
@@ -742,6 +954,9 @@
       .pricing-card.featured {
         transform: none;
       }
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
       .grid-3 {
         grid-template-columns: 1fr;
       }
@@ -775,6 +990,7 @@
         </a>
         <div class="nav-links">
           <a href="#planes">Planes</a>
+          <a href="#opiniones">Opiniones</a>
           <a href="#caracteristicas">Características</a>
           <a href="#faq">Preguntas Frecuentes</a>
           <a href="https://panel.altomarketing.com" target="_blank" class="btn-header">Área de Clientes</a>
@@ -795,7 +1011,7 @@
           Ver Planes y Precios
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
         </a>
-        <a href="#caracteristicas" class="btn-secondary">Conocer Ventajas</a>
+        <a href="#opiniones" class="btn-secondary">Opiniones Reales</a>
       </div>
 
       <div class="hero-features">
@@ -805,11 +1021,11 @@
         </span>
         <span>
           <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-          99.9% Uptime Garantizado
+          100% Recomendado en Facebook
         </span>
         <span>
           <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-          SSL HTTPS Gratuito
+          Excelente 4.7 en Trustpilot
         </span>
         <span>
           <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
@@ -963,6 +1179,178 @@
     </div>
   </section>
 
+  <!-- REVIEWS SECTION: TRUSTPILOT & FACEBOOK -->
+  <section class="reviews-section" id="opiniones">
+    <div class="container">
+      <div class="section-title">
+        <h2>Experiencias y Opiniones Reales</h2>
+        <p>Emisoras y directores de radio de toda Iberoamérica confían a diario en nuestra infraestructura de streaming.</p>
+      </div>
+
+      <!-- Resumen badges -->
+      <div class="reviews-badge-hub">
+        <div class="review-hub-box">
+          <div class="hub-icon-fb">f</div>
+          <div class="hub-text">
+            <strong>100% Recomendado</strong>
+            <span>Más de 250 opiniones en <a href="https://www.facebook.com/streamingdeaudioyvideo/reviews" target="_blank" rel="noopener">Facebook Reviews</a></span>
+          </div>
+        </div>
+
+        <div class="review-hub-box">
+          <div class="hub-icon-tp">★</div>
+          <div class="hub-text">
+            <strong>Excelente 4.7 / 5</strong>
+            <span>Valoración verificada en <a href="https://www.trustpilot.com/review/radionube.online" target="_blank" rel="noopener">Trustpilot</a></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subtítulo Trustpilot -->
+      <div class="reviews-title-sub">
+        <h3>
+          <span style="color: var(--tp-green);">★</span>
+          Opiniones Verificadas en Trustpilot
+        </h3>
+      </div>
+
+      <!-- Grid Trustpilot -->
+      <div class="reviews-grid">
+        <div class="review-card tp-card">
+          <div>
+            <div class="review-top">
+              <div class="review-stars">
+                <span class="star-tp">★</span><span class="star-tp">★</span><span class="star-tp">★</span><span class="star-tp">★</span><span class="star-tp">★</span>
+              </div>
+              <span class="review-tag tp">Verificada</span>
+            </div>
+            <div class="review-headline">Super agradecida por la rapidez</div>
+            <p class="review-quote">"Super agradecida por la rapidez en las respuestas y solución a cada necesidad, excelente servicio! Se ve la mejora constante y actualización, aquí una autodidacta en radio online!"</p>
+          </div>
+          <div class="review-author">
+            <div class="author-avatar">AL</div>
+            <div class="author-info">
+              <strong>Ayelen Ladru</strong>
+              <span>Argentina 🇦🇷</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card tp-card">
+          <div>
+            <div class="review-top">
+              <div class="review-stars">
+                <span class="star-tp">★</span><span class="star-tp">★</span><span class="star-tp">★</span><span class="star-tp">★</span><span class="star-tp">★</span>
+              </div>
+              <span class="review-tag tp">Verificada</span>
+            </div>
+            <div class="review-headline">Servicio confiable y de calidad</div>
+            <p class="review-quote">"Excelente experiencia con RadioNube. Muy buen servicio, fácil de usar y con una gran calidad de sonido. La plataforma funciona muy bien y ofrece una experiencia agradable. ¡Totalmente recomendable!"</p>
+          </div>
+          <div class="review-author">
+            <div class="author-avatar">EG</div>
+            <div class="author-info">
+              <strong>Esequiel García</strong>
+              <span>México 🇲🇽</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card tp-card">
+          <div>
+            <div class="review-top">
+              <div class="review-stars">
+                <span class="star-tp">★</span><span class="star-tp">★</span><span class="star-tp">★</span><span class="star-tp">★</span><span class="star-tp">★</span>
+              </div>
+              <span class="review-tag tp">Verificada</span>
+            </div>
+            <div class="review-headline">Excelente ayuda y soporte al cliente</div>
+            <p class="review-quote">"Agradezco a Alberto Gimenez de Radio Nube por la excelente ayuda brindada explicando cada paso a seguir. Estoy 100% satisfecho por el servicio al cliente. Recomiendo Radio Nube sin ninguna duda ya tengo 2 años usando su plataforma."</p>
+          </div>
+          <div class="review-author">
+            <div class="author-avatar">TF</div>
+            <div class="author-info">
+              <strong>Tony Franco</strong>
+              <span>Estados Unidos 🇺🇸</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subtítulo Facebook -->
+      <div class="reviews-title-sub">
+        <h3>
+          <span style="color: var(--fb-blue);">f</span>
+          Recomendaciones en Facebook
+        </h3>
+      </div>
+
+      <!-- Grid Facebook -->
+      <div class="reviews-grid">
+        <div class="review-card fb-card">
+          <div>
+            <div class="review-top">
+              <div class="review-stars">
+                <span class="star-gold">★</span><span class="star-gold">★</span><span class="star-gold">★</span><span class="star-gold">★</span><span class="star-gold">★</span>
+              </div>
+              <span class="review-tag fb">Recomienda</span>
+            </div>
+            <div class="review-headline">Excelente atención en soporte técnico</div>
+            <p class="review-quote">"Excelente atención en soporte técnico. Muy agradecidos por la predisposición constante y la estabilidad para nuestra emisora comunitaria."</p>
+          </div>
+          <div class="review-author">
+            <div class="author-avatar">AF</div>
+            <div class="author-info">
+              <strong>Afrovoces 90.5 FM</strong>
+              <span>Emisora de Radio</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card fb-card">
+          <div>
+            <div class="review-top">
+              <div class="review-stars">
+                <span class="star-gold">★</span><span class="star-gold">★</span><span class="star-gold">★</span><span class="star-gold">★</span><span class="star-gold">★</span>
+              </div>
+              <span class="review-tag fb">Recomienda</span>
+            </div>
+            <div class="review-headline">Excelente servicio se los recomiendo</div>
+            <p class="review-quote">"Excelente servicio se los recomiendo. Transmitimos nuestras emisiones deportivas sin cortes y con audio impecable en todo momento."</p>
+          </div>
+          <div class="review-author">
+            <div class="author-avatar">MS</div>
+            <div class="author-info">
+              <strong>MagaLih Sports</strong>
+              <span>Transmisiones Deportivas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card fb-card">
+          <div>
+            <div class="review-top">
+              <div class="review-stars">
+                <span class="star-gold">★</span><span class="star-gold">★</span><span class="star-gold">★</span><span class="star-gold">★</span><span class="star-gold">★</span>
+              </div>
+              <span class="review-tag fb">Recomienda</span>
+            </div>
+            <div class="review-headline">Empresa seria y muy buena atención</div>
+            <p class="review-quote">"Es una empresa seria, muy recomendable y con excelente atención. Desde Uruguay les enviamos un saludo cordial a todo el equipo."</p>
+          </div>
+          <div class="review-author">
+            <div class="author-avatar">TR</div>
+            <div class="author-info">
+              <strong>Tropimania RADIO</strong>
+              <span>Uruguay 🇺🇾</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- FEATURES / ADVANTAGES -->
   <section class="features-section" id="caracteristicas">
     <div class="container">
@@ -1014,7 +1402,7 @@
 
         <div class="feature-box">
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.48 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg>
           </div>
           <h3>Soporte Técnico 24/7</h3>
           <p>Asistencia en español ante cualquier duda o requerimiento técnico. Te ayudamos a conectar tu software desde el primer momento.</p>
@@ -1112,6 +1500,7 @@
           <h5>Navegación</h5>
           <ul class="footer-links">
             <li><a href="#planes">Planes y Tarifas</a></li>
+            <li><a href="#opiniones">Opiniones de Clientes</a></li>
             <li><a href="#caracteristicas">Características del Servicio</a></li>
             <li><a href="#faq">Preguntas Frecuentes</a></li>
             <li><a href="https://panel.altomarketing.com" target="_blank">Portal de Clientes</a></li>
