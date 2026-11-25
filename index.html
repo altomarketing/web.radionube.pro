@@ -692,7 +692,52 @@
       color: var(--text-muted);
     }
 
-    /* VALUE PROPOSITION / FEATURES GRID */
+    
+    /* SONICPANEL DEEP FEATURES */
+    .sp-category-header {
+      margin: 50px 0 25px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .sp-category-header h3 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary-dark);
+    }
+    .sp-badge {
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+    .feature-highlights {
+      list-style: none;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border-color);
+    }
+    .feature-highlights li {
+      font-size: 13px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .feature-highlights svg {
+      width: 14px;
+      height: 14px;
+      fill: #10b981;
+      flex-shrink: 0;
+    }
+
+/* VALUE PROPOSITION / FEATURES GRID */
     .features-section {
       padding: 80px 0;
       background: #ffffff;
@@ -1352,63 +1397,147 @@
     </div>
   </section>
 
-  <!-- FEATURES / ADVANTAGES -->
+    <!-- FEATURES / SONICPANEL CARACTERÍSTICAS -->
   <section class="features-section" id="caracteristicas">
     <div class="container">
       <div class="section-title">
-        <h2>¿Por qué elegir RadioNube?</h2>
-        <p>Infraestructura diseñada exclusivamente para emisoras de radio, podcasters y comunicadores que exigen estabilidad.</p>
+        <span class="hero-badge" style="background: rgba(33, 135, 177, 0.1); border-color: rgba(33, 135, 177, 0.3); color: var(--primary);">El Panel N° 1 del Mundo para Radios Online</span>
+        <h2>Potencia Total con SonicPanel® en Español</h2>
+        <p>Todo lo que necesitas para operar una emisora de radio profesional con automatización en la nube, calidad de estudio y estadísticas en tiempo real.</p>
+      </div>
+
+      <!-- CATEGORÍA 1: TRANSMISIÓN EN VIVO Y EN EL AIRE -->
+      <div class="sp-category-header">
+        <span class="sp-badge">En El Aire</span>
+        <h3>Funciones Exclusivas de Emisión en Vivo</h3>
       </div>
 
       <div class="grid-3">
         <div class="feature-box">
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg>
           </div>
-          <h3>1 Segundo de Retardo</h3>
-          <p>Nuestra red optimizada reduce el lag a solo 1 segundo. Tus oyentes escuchan lo que dices prácticamente en tiempo real.</p>
+          <h3>Inyección de Jingles al Vuelo</h3>
+          <p>Dispara sellos, separadores y jingles publicitarios directamente en la transmisión mientras estás al aire, sin pisar la música ni interrumpir a tus oyentes.</p>
+          <ul class="feature-highlights">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Inserción directa en vivo</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Efectos de desvanecimiento automáticos</li>
+          </ul>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 11H7V9h2v2zm4 0h-2V9h2v2zm4 0h-2V9h2v2z"/></svg>
+          </div>
+          <h3>Locutor Virtual Text-to-Voice</h3>
+          <p>Convierte texto escrito en voz profesional humana para decir la hora, títulos de canciones, clima o promociones institucionales programadas.</p>
+          <ul class="feature-highlights">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Voces realistas de alta calidad</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Locución automática entre canciones</li>
+          </ul>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/></svg>
+          </div>
+          <h3>Cambio de Playlist sin Cortes</h3>
+          <p>Pasa de una lista de reproducción a otra en caliente mientras el servidor continúa sonando, logrando una transición suave con crossfade profesional.</p>
+          <ul class="feature-highlights">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Cero segundos de silencio</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Transición con fundido perfecto</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA 2: AUTODJ Y GESTIÓN MUSICAL -->
+      <div class="sp-category-header">
+        <span class="sp-badge">Automatización</span>
+        <h3>Programación Avanzada y AutoDJ 24/7</h3>
+      </div>
+
+      <div class="grid-3">
+        <div class="feature-box">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+          </div>
+          <h3>Programación por Intervalos y Horarios</h3>
+          <p>Configura listas que se activen cada X minutos, en horarios exactos (al inicio de cada hora :00) o en días específicos de la semana con precisión absoluta.</p>
+          <ul class="feature-highlights">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Boletines de noticias y publicidad</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Detección de Zona Horaria por IA</li>
+          </ul>
         </div>
 
         <div class="feature-box">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
           </div>
-          <h3>AutoDJ Inteligente 24/7</h3>
-          <p>Sube tu música, programas grabados o podcasts. El servidor transmitirá de forma ininterrumpida sin necesidad de dejar tu PC encendida.</p>
+          <h3>Carga Rápida Web y Acceso FTP</h3>
+          <p>Sube gigabytes de música con tu cliente FTP favorito (FileZilla, WinSCP) en el puerto estándar 21 o mediante arrastrar y soltar desde el navegador.</p>
+          <ul class="feature-highlights">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Subida por bloques hasta 100x más rápida</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Creación automática de carpetas</li>
+          </ul>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3v9.28c-.47-.17-.97-.28-1.5-.28C8.01 12 6 14.01 6 16.5S8.01 21 10.5 21c2.31 0 4.2-1.75 4.45-4H15V6h4V3h-7z"/></svg>
+          </div>
+          <h3>Biblioteca Musical por Álbumes</h3>
+          <p>Organiza tu discografía con carpetas y álbumes en árbol. Agrega pistas a múltiples playlists sin duplicar archivos ni consumir espacio extra de disco.</p>
+          <ul class="feature-highlights">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Cero consumo redundante de almacenamiento</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Editor de etiquetas ID3v2 integrado</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CATEGORÍA 3: AUDIENCIA, ESTADÍSTICAS Y SEGURIDAD -->
+      <div class="sp-category-header">
+        <span class="sp-badge">Métricas & Control</span>
+        <h3>Estadísticas en Tiempo Real y Protección</h3>
+      </div>
+
+      <div class="grid-3">
+        <div class="feature-box">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <h3>Mapa Mundial Interactivo GeoIP</h3>
+          <p>Observa en tiempo real desde qué ciudades y países se conectan tus oyentes con marcadores en vivo que se actualizan automáticamente cada 5 segundos.</p>
+          <ul class="feature-highlights">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> IPs reales y dispositivos de tus oyentes</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Historial por horas, días y meses</li>
+          </ul>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          </div>
+          <h3>Cuentas de Locutores y DJs</h3>
+          <p>Crea usuarios ilimitados para tus conductores y locutores con permisos personalizados, claves individuales y foto de perfil en el reproductor web al salir en vivo.</p>
+          <ul class="feature-highlights">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Emisión remota sin compartir clave maestra</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Widget "En Vivo" automático</li>
+          </ul>
         </div>
 
         <div class="feature-box">
           <div class="feature-icon">
             <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
           </div>
-          <h3>Certificados SSL (HTTPS)</h3>
-          <p>Todos los puertos y transmisiones cuentan con SSL nativo para evitar bloqueos en navegadores modernos y permitir su inserción en cualquier web.</p>
-        </div>
-
-        <div class="feature-box">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z"/></svg>
-          </div>
-          <h3>Compatible con tus Softwares</h3>
-          <p>Emite con los programas líderes: ZaraRadio, RadioBOSS, SAM Broadcaster, BUTT, OBS Studio, vMix o VirtualDJ sin configuraciones complejas.</p>
-        </div>
-
-        <div class="feature-box">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
-          </div>
-          <h3>Apps Móviles y Web</h3>
-          <p>Llega a smartphones Android e iOS con reproductores ligeros que no consumen datos excesivos y con soporte para vehículos.</p>
-        </div>
-
-        <div class="feature-box">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.48 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg>
-          </div>
-          <h3>Soporte Técnico 24/7</h3>
-          <p>Asistencia en español ante cualquier duda o requerimiento técnico. Te ayudamos a conectar tu software desde el primer momento.</p>
+          <h3>SSL Nativo y Protección Anti-DDoS</h3>
+          <p>Enlaces de audio 100% seguros con HTTPS permanente para navegadores modernos, firewall SonicPanel activo y mitigación contra ataques de denegación de servicio.</p>
+          <ul class="feature-highlights">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Soporte Shoutcast v1/v2 e Icecast</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Protección Brute Force en puertos de login</li>
+          </ul>
         </div>
       </div>
+
     </div>
   </section>
 
